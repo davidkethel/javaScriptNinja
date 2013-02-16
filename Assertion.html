@@ -4,13 +4,26 @@
 
 <script>
 
-function assert(value desc)
-{
-
+function assert(value, desc){
+    var li = document.createElement("li");
+    li.className = value ? "pass": "fail";
+    li.appendChild(document.createTextNode(desc));
+    document.getElementById("results").appendChild(li);
 }
 
+window.onload = function(){
+	assert(true, "the Test suite is ruingin");
+	assert(false, "fail");
+	
+	
+}
 </script>
 
+<style>
+#results li.pass {color : green;}
+#results li.fail {color: red;}
+
+</style>
 
 </head>
 <body>
