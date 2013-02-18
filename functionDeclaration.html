@@ -29,8 +29,26 @@
 			}
 			assert( typeof window.thirdFunction === "function", "thirdfunction is a property of the widow");
 			assert(thirdFunction.name === "", "third function has no name");
-			
-			
+
+			// declare a named function on the global scope
+			function outer() {
+
+				assert( typeof inner === "function", "inner() is in scope before its declaration");
+
+				// decalre a named function 
+				function inner() {
+				}
+
+				assert( typeof inner === "function", "inner() is in scope after its declaration");
+				assert(window.inner === undefined, "inner() is not in the global/window scope");
+			}
+
+			outer();
+
+			assert(window.inner === undefined, "inner() is still not in the global/window scope");
+
+			window.fourthFunction = function fithFunction(){return true;};
+			assert(window.fourthFunction.name === "fithFunction", "fourthFunction's real name is fithfunction");
 
 		</script>
 	</body>
