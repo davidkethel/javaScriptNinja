@@ -1,31 +1,32 @@
 <html>
 	<head>
-	<title>This</title>	
+		<title>This</title>
 		<script type="text/javascript" src="assert.js"></script>
-		<link href="main.css" rel="stylesheet" type="text/css">		
+		<link href="main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<script type="text/javascript">
-			
 			// declare a function that return its "this" variable.
-			function run() {return this;}
-		
+			function run() {
+				return this;
+			}
+
 			assert(run() === window, "run in the window");
-		
+
 			var walk = run;
-			assert(walk() === window, "walk is the window");	
-			
+			assert(walk() === window, "walk is the window");
+
 			var dave1 = {
 				workout : run
 			};
 			assert(dave1.workout() === dave1, "dave1 is running");
-			
+
 			var dave2 = {
 				workout : run
 			};
-			assert(dave2.workout() === dave2, "dave2 is runing");		
+			assert(dave2.workout() === dave2, "dave2 is runing");
 		</script>
-		
+
 	</body>
-	
+
 </html>
