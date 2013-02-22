@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>Object This</title>
+		<script type="text/javascript" src="assert.js" ></script>
+		<link rel="stylesheet" href="main.css" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person() {
+				this.run = function() {
+					return this;
+				};
+			}
+
+			var dave = new Person();
+			var paul = new Person();
+
+			assert(dave.run() === dave, "Dave is running");
+			assert(paul.run() === paul, "Paul is running");
+
+		</script>
+	</body>
+</html>
