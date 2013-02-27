@@ -1,0 +1,27 @@
+<html>
+	<head>
+
+		<title> Call Backs</title>
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			// for each item in the list, call the callback,
+			// on it passing in its index
+			function forEach(list, callback) {
+				for (var i = 0; i < list.length; i++) {
+					callback.call(list[i], i);
+				}
+			}
+
+			var weapons = ["shuriken", "katana", "numchucks"];
+
+			forEach(weapons, function(index) {
+				assert(this == weapons[index], "got the expected value of " + weapons[index]);
+			})
+
+		</script>
+	</body>
+</html>
