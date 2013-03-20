@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title> Simple recusion using an object property</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var ninja = {
+				say : function signal(n){
+					return n>1 ? signal(n-1) + "-chirp": "chirp";
+				}
+			};
+			
+			assert(ninja.say(3) == "chirp-chirp-chirp", "Works as we would expect it to!");
+			
+			
+			var samurai = {say: ninja.say};
+			
+			ninja = {};
+			
+			assert(samurai.say(3) == "chirp-chirp-chirp", "The method correctly call itself.")
+					</script>
+	</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title> Simple examples of anonymous functions</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function() {
+				assert(true, 'power');
+			};
+
+			var dave = {
+				shout : function() {
+					assert(true, "DAVE");
+				}
+			};
+
+			dave.shout();
+
+			setTimeout(function() {
+				assert(true, "Forever");
+			}, 500);
+			
+
+		</script>
+	</body>
+
+</html>

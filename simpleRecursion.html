@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> Simple examples of anonymous functions</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		function say(n){
+			
+			return n>1 ? say(n - 1) + "-Say" : "Say";
+		}
+		
+		assert(say(3) == "Say-Say-Say", "Calling the name function comes naturally");
+		
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title> Simple recusion using an object property</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			var viking = {
+				say : function(n) {
+
+					return n > 1 ? viking.say(n - 1) + "-Say" : "Say";
+				}
+			};
+
+			var samurai = {
+				say : viking.say
+			};
+
+			viking = {};
+
+			try {
+				assert(samurai.say(3) == "Say-Say-Say", "Is this going to work:");
+
+			} catch(e) {
+				assert(false, "Uh, this isn't good! Where did viking.chirp go");
+			}
+		</script>
+	</body>
+
+</html>
