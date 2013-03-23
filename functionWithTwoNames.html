@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> Simple recusion using an object property</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			var viking = function myViking(){
+				assert(viking == myViking, "This function is named two things at once!")
+			}
+			
+			viking();
+			
+			assert(typeof myViking == 'undefined', "But myViking isn't defined outside of the function.");
+			
+		</script>
+	</body>
+
+</html>

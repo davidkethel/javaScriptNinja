@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title> Simple examples of anonymous functions</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		var ninja = {
+			chirp: function(n){
+				return n > 1 ? arguments.callee(n-1) + "-chirp":"chirp";
+			}
+		}
+		
+		assert(ninja.chirp(3)=="chirp-chirp-chirp", "arguments.callee is the function itself");
+		
+		</script>
+	</body>
+
+</html>
