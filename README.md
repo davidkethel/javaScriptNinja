@@ -1,4 +1,4 @@
-Just a repo for me to try out some of the examples from the book "secrets of the Java Script Ninja"
+Just a repo for me to try out some of the examples from the book "secrets of the Java Script Ninja", and record what I learnt
 
 ####[Function Declarations] (https://github.com/davidkethel/javaScriptNinja/blob/master/functionDeclaration.html)####
 
@@ -14,8 +14,8 @@ It also demonstrates forware referencing, where by a function is in scope before
 
 ####[Outer Inner Scope] (https://github.com/davidkethel/javaScriptNinja/blob/master/outerInnerScope.html) ####
 
-This page demonstrates the rules governing scope within javascript.
+Scope in javascript is not defined by braces but rather by function declarations, and that the global scope acts like on big function definition.
 
-The rules for function scope are as follows
+Named functions are in scope within the entire function in which they are declared. 
 
-The rules for variable scope are as follows. 
+Variables are in scope after they have been decalred to the end of the function in which they are declared. 
