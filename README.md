@@ -29,3 +29,14 @@ There are 2 ways to do this
 
 * Apply - Passed 2 parameters. The object to be used as the context, and an array of values to used as arguments to the function.
 * Call - Multiple parameters. The first parameter is the object to be used as the context, then all the variables to be used as arguments to the function.
+
+
+#### [Call Backs] (https://github.com/davidkethel/javaScriptNinja/blob/master/callbacks.html) ####
+
+This page demonstrates a nifty use of the call function. 
+
+It creates a for each function that takes an array and a function. The for each function calls the function for each element in the array, using the element 
+as the context of the call. 
+
+This also demonstrates a more "functional" way thinking witin java script. 
+
