@@ -19,3 +19,13 @@ Scope in javascript is not defined by braces but rather by function declarations
 Named functions are in scope within the entire function in which they are declared. 
 
 Variables are in scope after they have been decalred to the end of the function in which they are declared. 
+
+
+#### [Apply Call] (https://github.com/davidkethel/javaScriptNinja/blob/master/applyCall.html) ####
+
+It is possible in java script to invoke a function and give it any object we want as its context. 
+
+There are 2 ways to do this
+
+* Apply - Passed 2 parameters. The object to be used as the context, and an array of values to used as arguments to the function.
+* Call - Multiple parameters. The first parameter is the object to be used as the context, then all the variables to be used as arguments to the function.
