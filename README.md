@@ -42,4 +42,9 @@ This also demonstrates a more "functional" way thinking witin java script.
 
 #### [Anonymous Function] (https://github.com/davidkethel/javaScriptNinja/blob/master/simpleAnonynousFunctions.html) ####
 
-Demonstrates a couple of usages of the anonymous functions (Function defined without a name)
+Demonstrates a couple of usages of the anonymous functions (Function defined without a name) including
+
+* As an event handeler
+* On a property of an object
+* As the callback to the setTimeout function
+
