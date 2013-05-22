@@ -40,3 +40,6 @@ as the context of the call.
 
 This also demonstrates a more "functional" way thinking witin java script. 
 
+#### [Anonymous Function] (https://github.com/davidkethel/javaScriptNinja/blob/master/simpleAnonynousFunctions.html) ####
+
+Demonstrates a couple of usages of the anonymous functions (Function defined without a name)
