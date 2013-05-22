@@ -53,3 +53,8 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
 
 Except that the function name is only available within the function. 
+
+
+#### [Object/This] (https://github.com/davidkethel/javaScriptNinja/blob/master/objectThis.html) ####
+
+Demonstrates the usage of of a function as an object constructor. Also shows that the This refers to individual objects context.
