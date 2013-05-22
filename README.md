@@ -48,3 +48,8 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 * On a property of an object
 * As the callback to the setTimeout function
 
+#### [Function with 2 Names] (https://github.com/davidkethel/javaScriptNinja/blob/master/functionWithTwoNames.html) ####
+
+This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
+
+Except that the function name is only available within the function. 
