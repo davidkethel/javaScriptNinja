@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title> Simple examples of anonymous functions</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+
+            function merge(root) {
+                for (var i = 1; i < arguments.length; i++) {
+                    for (var key in arguments[i]) {
+                        root[key] = arguments[i][key];
+                    }
+                }
+                return root;
+            }
+
+
+            var merged = merge(
+                { name: "Dave" },
+                { city: "Brisbane" }
+            );
+
+            assert(merged.name == "Dave", "The original name is intact");
+            assert(merged.city == "Brisbane", "And the city has been coped over");
+		
+		
+		</script>
+	</body>
+
+</html>
