@@ -58,3 +58,23 @@ Except that the function name is only available within the function.
 #### [Object/This] (https://github.com/davidkethel/javaScriptNinja/blob/master/objectThis.html) ####
 
 Demonstrates the usage of of a function as an object constructor. Also shows that the This refers to individual objects context.
+
+#### [Simple Recursion] (https://github.com/davidkethel/javaScriptNinja/blob/master/simpleRecursion.html) ####
+
+This example demonstrates recusion by using a named function. 
+
+#### [Recusion using an Object property] (https://github.com/davidkethel/javaScriptNinja/blob/master/simpleRecursion_WithObjectProperty.html) ####
+
+This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
+
+#### [Problem with above recursion] (https://github.com/davidkethel/javaScriptNinja/blob/master/simpleRecursion_WithObjectProperty_ObjectReset.html) ####
+
+This example demonstrates a problem with the above example. The samurai object has reference to the say method on the Viking object. This is a problem because the say method calls itself by referencing the Viking object. 
+
+So trying to run the samruai.say method after the Viking object has been reset causes an error as there is not viking.say to call in the recursive function.
+
+#### [Solving function recurion problem] (https://github.com/davidkethel/javaScriptNinja/blob/master/simpleRecursion_WithFunctionName_ObjectReset.html) ####
+
+To solve the above problem we can give the function a name, and call the functions name rather then the property refernce inside the function. 
+
+This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
