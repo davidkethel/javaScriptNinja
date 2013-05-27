@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title> slicing the Argument list</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+            function multiMax(multi) {
+                return multi * Math.max.apply(Math,
+                    Array.prototype.slice.call(arguments, 1));
+            }
+
+            assert(multiMax(3, 1, 2, 4) == 12, "3*4=12 (First arg, by largest.)");
+
+
+		</script>
+	</body>
+
+</html>
