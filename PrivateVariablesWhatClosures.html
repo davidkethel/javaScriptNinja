@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title> What eles closures can see</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		    function Ninja() {
+
+		        var feints = 0;
+
+		        this.getFeints = function() {
+		            return feints;
+		        };
+
+		        this.feint = function() {
+		            feints++;
+		        };
+		    }
+
+
+		    var ninja = new Ninja();
+
+		    ninja.feint();
+
+		    assert(ninja.feints === undefined, "And the private data is inaccessible to us");
+
+		    assert(ninja.getFeints() == 1, "We are ablt to access the internal feint count");
+		    
+            
+		</script>
+	</body>
+
+</html>
