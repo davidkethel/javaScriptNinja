@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title> A Not so Simple examples of a closure</title>
+
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		    var outerValue = 'Dave';
+
+		    var later;
+		    
+            function outerFunction() {
+                var innerValue = 'samurai';
+                
+                function innerFunction() {
+                    assert(outerValue, "I can see Dave");
+                    assert(innerValue, "I can see the samurai");
+                }
+
+                later = innerFunction;
+            }
+
+
+            outerFunction();
+
+            later();
+            
+		</script>
+	</body>
+
+</html>
