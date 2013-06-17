@@ -1,0 +1,43 @@
+<html>
+	<head>
+	    <title> Closure in Ajax call Back</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+	</head>
+    <body>
+        
+        
+        <div id="testSubject"></div>
+        
+        <button type="button" id="testButton">Go!</button>
+        
+        <script type="text/javascript">            
+
+            var outsideClick = "Peter";
+            
+            jQuery('#testButton').click(function() {
+
+                var elem$ = jQuery("#testSubject");
+                elem$.html("Loading...");
+
+                assert(outsideClick === "Peter", "We Can see outsideClick in the click handeler.");
+
+                jQuery.ajax({
+                    url: "test.html",
+                    success: function(html) {
+
+                        assert(elem$, "We can see elem$, via the closure for the callback.");
+                        assert(outsideClick === "Peter", "We can also see outsideClick in the success handler as well.");
+                        elem$.html(html);
+
+                    }
+                });
+
+            });
+
+        </script>
+    </body>
+
+</html>
