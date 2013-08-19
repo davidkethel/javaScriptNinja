@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title> Closure in Timer Interval Call Back</title>
+		<script type="text/javascript" src="assert.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+		<style type="text/css">
+			#box {
+				position: absolute;
+				border: 3px solid blue;
+				width: 200px;
+				height: 200px;
+				background-color: #6495ed;
+				font-size: 2em;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div id="box">
+			asd
+		</div>
+		<script type="text/javascript">
+			function animateIt(elementId) {
+
+				var elem = document.getElementById(elementId);
+				var tick = 0;
+
+				var timer = setInterval(function() {
+					if (tick < 100) {
+						elem.style.left = elem.style.top = tick + 'px';
+						tick++;
+					} else {
+						clearInterval(timer);
+						assert( tick = 100, "Tick accessed via a closure");
+						assert(elem, "Element also acces via a closure");
+						assert(timer, "Timer reference also obtained via a closure");
+					}
+
+				}, 10);
+
+			}
+
+			animateIt('box');
+
+		</script>
+
+	</body>
+</html>
