@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title> Partially Applying arguments to a Native Function</title>
+	    <script type="text/javascript" src="assert.js"></script>
+        <script type="text/javascript" src="partial.js"></script>
+		<link href="main.css" type="text/css" rel="stylesheet">
+		
+	</head>
+	<body>
+		
+	    <script>    	    
+
+    	    Function.prototype.curry = function() {
+
+    	        var fn = this;
+    	        var args = Array.prototype.slice.call(arguments);
+                
+    	        return function() {
+    	            return fn.apply(this, args.concat(Array.prototype.slice.call(arguments)));
+    	        };
+    	    };
+            
+    	    String.prototype.csvPartial = String.prototype.split.partial(/,\s*/);
+    	    String.prototype.csvCurry = String.prototype.split.curry(/,\s*/);
+
+    	    var resultsPartial = ("Dave, Sim, Peter").csvPartial();
+    	    var resultsCurry = ("Dave, Sim, Peter").csvCurry();
+
+    	    assert(resultsPartial[0] == "Dave" && resultsPartial[1] == "Sim" && resultsPartial[2] == "Peter", "The test values were split properly using Partial");
+    	    assert(resultsCurry[0] == "Dave" && resultsCurry[1] == "Sim" && resultsCurry[2] == "Peter", "The test values were split properly using Curry");
+
+    	</script>
+	</body>
+</html>
