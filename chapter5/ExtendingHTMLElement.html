@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title> A for each Method for arrays </title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+    <body>
+        <div id="parnet">
+            <div id="a">I'm going to be removed.</div>
+            <div id="b">Me Too!</div>
+            
+            <input type="button" value="Remove Divs!" onclick="removeDivs()"/>
+        </div>
+
+        <script type="text/javascript">
+
+            function removeDivs() {
+
+                HTMLElement.prototype.remove = function() {
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
+                };
+
+                var a = document.getElementById("a");
+                a.parentNode.removeChild(a);
+
+                document.getElementById("b").remove();
+
+                assert(!document.getElementById("a"), "a is gone.");
+                assert(!document.getElementById("b"), "b is gone Too.");
+            }
+        </script>
+	    
+    </body>
+</html>
