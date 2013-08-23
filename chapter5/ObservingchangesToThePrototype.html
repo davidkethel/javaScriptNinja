@@ -9,19 +9,19 @@
 	<body>
 	    <script type="text/javascript">
 
-	        function Ninja() { }
+	        function Ninja() {
+	            this.swung = true;
+	        }
+            
+	        var ninja = new Ninja();
 
 	        Ninja.prototype.swingSword = function() {
-	            return true;
+	            return this.swung;
 	        };
 
+	        var ninja = new Ninja();
+	        assert(ninja.swingSword(),'Method exists, even out of order.');
 
-	        var ninja1 = Ninja();
-	        assert(ninja1 === undefined, "No instance of Ninja Created.");
-
-
-	        var ninja2 = new Ninja();
-	        assert(ninja2 && ninja2.swingSword && ninja2.swingSword(), "Instance exists and method is callable.");
 
     	</script>
 	    
