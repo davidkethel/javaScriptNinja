@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title> Creating a new instance with a prototype method</title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+	    <script type="text/javascript">
+
+	        function Ninja() { };
+
+	        var ninja1 = new Ninja();
+	        var ninja2 = new ninja1.constructor();
+
+	        assert(ninja2 instanceof Ninja, "It's a Ninja!");
+	        assert(ninja1 !== ninja2, "But not the same Ninja");
+	        
+    	</script>
+	    
+	</body>
+</html>
