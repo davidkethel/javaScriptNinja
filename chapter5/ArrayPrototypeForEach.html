@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title> A for each Method for arrays </title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+	    <script type="text/javascript">
+
+    	    if (!Array.prototype.davesForEach) {
+    	        Array.prototype.davesForEach = function (callback, context) {
+    	            for (var i = 0; i < this.length; i++) {
+    	                callback.call(context || null, this[i], i, this);
+    	            }
+    	        };
+    	    }
+
+
+    	    ["a", "b", "c"].davesForEach(function (value, index, array) {
+    	        assert(value, "Is in postition " + index + " out of " + (array.length - 1));
+    	    });
+            
+    	</script>
+	    
+	</body>
+</html>
