@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title> A for each Method for arrays </title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+    <body>
+        
+        <script type="text/javascript">
+
+            Object.prototype.keys = function() {
+                var keys = [];
+                for (var i in this) {
+                    if (this.hasOwnProperty(i)) {
+                        keys.push(i);
+                    }
+                }
+                return keys;
+            };
+
+            var obj = {
+                a: 1,
+                b: 2,
+                c: 3
+            };
+
+            assert(obj.keys().length == 3, "There are three properties in this object");
+            
+        </script>
+    </body>
+</html>
