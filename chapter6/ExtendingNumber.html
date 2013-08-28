@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title> A for each Method for arrays </title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+	    <script type="text/javascript">
+
+    	    Number.prototype.add = function(num) {
+    	        return this + num;
+    	    };
+
+            var n = 5;
+            assert(n.add(3) == 8, "It works when the number is in a variable.");
+
+            assert((5).add(3) == 8, "Also works if a number is wrapped in a parantheses.");
+            
+        //    assert(5.add(3) == 8,'What about a simple literal.');
+            
+
+
+
+    	    
+    	</script>
+	    
+	</body>
+</html>
