@@ -10,6 +10,31 @@
 	    <script type="text/javascript">
 
 
+            function Person(name) {
+
+                var privName = name;
+
+                this.getName = function() {
+                    return privName;
+                };
+                
+                function setName(newName) {
+                    privName = newName;
+                }
+            }
+
+
+            var myPerson = new Person("Dave");
+            
+
+
+            //assert(privName == "Dave", "is dave visible");
+
+
+            assert(myPerson.getName() == "Dave", "is dave visible");
+
+
+
     	    
 
     	</script>
