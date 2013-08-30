@@ -36,12 +36,16 @@
 
 
     	    var person = new Person(true);
-
     	    assert(person.dance(), "The Person is dancing.");
 
+    	    var ninja = new Ninja();
+    	    assert(ninja.swingSword(), "The sword is swinging");
 
+    	    assert(!ninja.dance(), "The ninja is not dancing");
 
+    	    assert(person instanceof Person, "Person is a Person");
 
+    	    assert(ninja instanceof Ninja && ninja instanceof Person, "Ninja is a Ninja and a Person");
 
 
 
