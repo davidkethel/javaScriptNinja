@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> How to determine is a Function was called as a Constructor </title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+	</head>
+    <body>
+        
+        <script type="text/javascript">
+            function Test() {
+                return this instanceof arguments.callee;
+            }
+
+
+            assert(!Test(), "We didn't instantiate, so it returns false.");
+            assert(new Test(), "We did instantiate, return true.");
+        
+        </script>
+	    
+    </body>
+</html>
