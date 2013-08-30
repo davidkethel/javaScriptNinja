@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title> Sub Classing The Array object</title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+	    <script type="text/javascript">
+
+	        function MyArray() { }
+
+	        MyArray.prototype = new Array();
+
+	        var mine = new MyArray();
+	        mine.push(1, 2, 3);
+
+	        assert(mine.length == 3, "All the items in our Sub-Classed Array.");
+	        assert(mine instanceof Array, "Verify that we implemented Array Functionality.");
+
+    	</script>
+	    
+	</body>
+</html>
