@@ -12,30 +12,36 @@
 
             function Person(name) {
 
+                globalName = name;
+
+                this.getGlobalName = function() {
+                    return globalName;
+                };
+
+                this.setGlobalName = function(newName) {
+                    globalName = newName;
+                };
+
+
                 var privName = name;
 
                 this.getName = function() {
                     return privName;
                 };
-                
-                function setName(newName) {
+
+                this.setName = function(newName) {
                     privName = newName;
-                }
+                };
             }
 
 
-            var myPerson = new Person("Dave");
+            var firstPerson = new Person("Dave");
+            assert(globalName == "Dave", "globalName is dave");
+            var secondPerson = new Person("Paul");
+            assert(globalName == "Paul", "globalName is Paul");
             
-
-
-            //assert(privName == "Dave", "is dave visible");
-
-
-            assert(myPerson.getName() == "Dave", "is dave visible");
-
-
-
-    	    
+            assert(firstPerson.getName() == "Dave", "firstPerson is Dave");
+            assert(secondPerson.getName() == "Paul", "SecondPerson is Paul");
 
     	</script>
 	    
