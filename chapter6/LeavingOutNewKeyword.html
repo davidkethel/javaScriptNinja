@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title> Leaving out the new key word</title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+	    <script type="text/javascript">
+
+
+            function User(first, last) {
+                this.name = first + " " + last;
+            }
+
+            var user = User("David", "Kethel");
+
+            assert(user, "User Instantiated");
+            assert(user.name == "David Kethel", "User Name Correcty assigned");
+
+    	</script>
+	</body>
+</html>
