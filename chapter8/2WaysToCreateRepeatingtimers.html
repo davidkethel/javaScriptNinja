@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title> Leaving out the new key word</title>
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+	    <script type="text/javascript">
+
+    	    setTimeout(function repeatMe() {
+    	        /* some long block of code... */
+    	        alert("SetTimeOut");
+    	        setTimeout(repeatMe, 10);
+    	    }, 10);
+
+
+    	    setInterval(function() {
+    	        /* some long block of Code */
+    	        alert("setInterval");
+    	    }, 10);
+
+
+    	</script>
+	</body>
+</html>
