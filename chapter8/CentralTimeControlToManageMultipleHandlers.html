@@ -3,15 +3,76 @@
 		<title> A central timer control to manage multiple handelers </title>
 		<link href="../main.css" type="text/css" rel="stylesheet">
 		
+	    <style type="text/css">
+	        #box {
+	            position: absolute;
+	            background-color: #00bfff;
+	            border: 2px solid #00008b;
+	            padding: 8px;
+	        }
+    	</style>
+        
+        
+
 	</head>
     <body>
         
         
-        <table><tbody></tbody></table>
-        
+        <div id="box"> Hello</div>
 
+        
         <script type="text/javascript">
 
+            var timers = {
+                timerId: 0,
+                timers: [],
+
+                add: function(fn) {
+                    this.timers.push(fn);
+                },
+
+                start: function runNext() {
+                    if (this.timerId) {
+                        return;
+                    }
+                    (function() {
+                        if (timers.timers.length > 0) {
+                            for (var i = 0; i < timers.timers.length; i++) {
+                                if (timers.timers[i]() === false) {
+                                    timers.timers.splice(i, 1);
+                                    i--;
+                                }
+                            }
+                            timers.timerId = setTimeout(runNext, 0);
+                        }
+                    })();
+                },
+
+                stop: function() {
+                    clearTimeout(this.timerId);
+                    this.timers = 0;
+                }
+            };
+
+            var box = document.getElementById("box"), x = 0, y = 20;
+
+            timers.add(function() {
+                box.style.left = x + "px";
+                if (++x > 50) {
+                    return false;
+                }
+            });
+
+
+            timers.add(function() {
+                box.style.top = y + "px";
+                y += 2;
+                if (y > 120) {
+                    return false;
+                }
+            });
+
+            timers.start();
             
         </script>
     </body>
