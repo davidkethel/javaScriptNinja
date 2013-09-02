@@ -9,28 +9,35 @@
 	<body>
 	    <script type="text/javascript">
 
-	        (function func1(val) {
+	        function func1(val) {
 
+	            this.dave = "dave";
+	            var bill = "bill";
 
-	            //this.dave = "dave";
-	            //var  bill = "bill";
+	            return bill;
 
+	        }
 
-	            //var i = 0;
-
-
-	            assert(val == "Dave", "Function is run immediatly");
-
-
-	           })("Dave");
+	        var bill1 = func1();
 	            
+            
+
+            function Func2() {
+                this.peter = "peter";
+                var luke = "luke";
+            }
+
+            assert(dave === "dave", " 'this' is available ");
+            assert(!typeof bill !== 'undefined', "'va' is not");            
 
 
+            var myFun2 = new Func2();
+
+            assert(typeof peter == "undefined", "peter is not global on a object");
+            assert(myFun2.peter == "peter", "peter is defined in its object");
+            assert(!typeof luke !== 'undefined', "Luke 'va' is not");
 
 
-
-	        //assert(dave === "dave", "Dave is global");
-	        //assert(bill === "bill", "Dave is global");
 
 
     	</script>
