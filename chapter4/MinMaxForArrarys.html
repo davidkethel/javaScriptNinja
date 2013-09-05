@@ -2,8 +2,8 @@
 	<head>
 		<title> Min and Max functions that work on arrays </title>
 
-		<script type="text/javascript" src="assert.js"></script>
-		<link href="main.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../assert.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
 
 	</head>
 	<body>
@@ -16,7 +16,6 @@
             function largest(array) {
                 return Math.max.apply(Math, array);
             }
-
             assert(smallest([0, 1, 2, 3]) == 0, "Located the smallest value.");
 
             assert(largest([0, 1, 2, 3]) == 3, "located the largest value.");
