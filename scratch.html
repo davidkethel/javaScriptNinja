@@ -37,10 +37,14 @@
             //assert(myFun2.peter == "peter", "peter is defined in its object");
             //assert(!typeof luke !== 'undefined', "Luke 'va' is not");
 
+	        var outer1 = 4;
+	        var outer2 = 4;
+
+
     	    var outerFunc = function() {
 
-    	        var var1 = 3;
-    	        var var2 = 5;
+    	        var var1 = outer1;
+    	        var var2 = outer2;
 
     	        return function () {
     	            return var1 * var2;
@@ -51,10 +55,18 @@
     	    var outerResult = outerFunc();
 
 
-    	   // assert(typeof var1 == "undefined", "I cant See var1");
+    	    assert(typeof var1 == "undefined", "I cant See var1");
 
 
-    	    assert(outerResult() == 15, "Fisrt Time equals 20");
+    	    assert(outerResult() == 16, "Fisrt Time equals 16");
+
+
+    	    outer1 = 5;
+    	    outer2 = 5;
+
+
+    	    assert(outerResult() == 25, "second Time equals 25");
+
     	    //assert(outerResult() == 25, "Fisrt Time equals 25");
 
 
