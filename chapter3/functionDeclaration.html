@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>function Declarations</title>
+		<script src="../assert.js" type="text/javascript"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet" />
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			// declare a named function, that is available as a property of the window
+			function firstFunction() {
+				return true;
+			}
+
+			assert( typeof window.firstFunction == "function", "firstFunction() is a property of window");
+			assert(firstFunction.name === "firstFunction", "firstFunctions Name is firstFunction");
+
+			//declare an anonymous function, that is available as a property of the window
+			var secondFunction = function() {
+				return true;
+			}
+			assert( typeof window.secondFunction == "function", "secondfunction() is a property of the window");
+			assert(secondFunction.name === "", "second Function has no name");
+
+			// Declare an anonymous function, that is available as a property of the window.
+			// identical to secondfunction, except the property is explicit set to the window.
+			window.thirdFunction = function() {
+				return true;
+			}
+			assert( typeof window.thirdFunction === "function", "thirdfunction is a property of the widow");
+			assert(thirdFunction.name === "", "third function has no name");
+
+			// declare a named function on the global scope
+			function outer() {
+
+				assert( typeof inner === "function", "inner() is in scope before its declaration");
+
+				// decalre a named function 
+				function inner() {
+				}
+
+				assert( typeof inner === "function", "inner() is in scope after its declaration");
+				assert(window.inner === undefined, "inner() is not in the global/window scope");
+			}
+
+			outer();
+
+			assert(window.inner === undefined, "inner() is still not in the global/window scope");
+
+			window.fourthFunction = function fithFunction(){return true;};
+			assert(window.fourthFunction.name === "fithFunction", "fourthFunction's real name is fithfunction");
+
+		</script>
+	</body>
+</html>
+
