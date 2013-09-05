@@ -37,37 +37,55 @@
             //assert(myFun2.peter == "peter", "peter is defined in its object");
             //assert(!typeof luke !== 'undefined', "Luke 'va' is not");
 
-	        var outer1 = 4;
-	        var outer2 = 4;
+    	    var outer1 = {
+    	        x: 3
+    	    };
+	            
+	        var outer2 = {
+	            x: 4
+	        };
 
+            var outerFunc = function() {
 
-    	    var outerFunc = function() {
+    	        var inner1 = outer1;
+    	        var inner2 = outer2;
 
-    	        var var1 = outer1;
-    	        var var2 = outer2;
-
-    	        return function () {
-    	            return var1 * var2;
+    	        return function innerFunc () {
+    	            return inner1.x * inner2.x;
     	        };
-    	    };	        
-
-
+    	    };
+            
     	    var outerResult = outerFunc();
+    	    alert(outerResult());
+    	    
+    	    outer1.x = 4;
+    	    outer2.x = 5;
+
+    	    alert(outerResult());
+
+	        //var var1 = 9;
+	        //var var2 = var1;
+
+	        //alert(var1 + "," + var2);
+	        //var1 = 10;
+	        //alert(var1 + "," + var2);
+
+    	    //var obj1 = {
+    	    //    x: 10
+    	    //};
+
+    	    //var obj2 = obj1;
+
+    	    //alert(obj1.x + ", " + obj2.x);
+
+    	    //obj1.x = 20;
+
+    	    //alert(obj1.x + ", " + obj2.x);
 
 
-    	    assert(typeof var1 == "undefined", "I cant See var1");
 
 
-    	    assert(outerResult() == 16, "Fisrt Time equals 16");
-
-
-    	    outer1 = 5;
-    	    outer2 = 5;
-
-
-    	    assert(outerResult() == 25, "second Time equals 25");
-
-    	    //assert(outerResult() == 25, "Fisrt Time equals 25");
+	        //assert(outerResult() == 25, "Fisrt Time equals 25");
 
 
 	        
