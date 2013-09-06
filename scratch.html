@@ -100,17 +100,27 @@
 
 
 
-            function func1() {
-                return func1.x + 4;
+            //function func1() {
+            //    return func1.x + 4;
+            //}
+
+
+            //func1.x = 123;
+
+
+            //assert(func1() == 127, "A function can access its properties");
+
+    	    function func1() {
+    	        return 12 - 4;
+    	    }
+    	    
+
+            function func2(func) {
+              return func();
             }
 
 
-            func1.x = 123;
-
-
-            assert(func1() == 127, "A function can access its properties");
-
-
+            assert(func2(func1) == 8, "One functino passed into another function");
 
     	</script>
 	</body>
