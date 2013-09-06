@@ -21,6 +21,13 @@ Named functions are in scope within the entire function in which they are declar
 Variables are in scope after they have been decalred to the end of the function in which they are declared. 
 
 
+####[3.3 Function vs Method Invocations] (chapter3/3.3_FunctionVsMethodInvocation.html) ####
+
+This page shows the difference between a function and method invocation of a function. The difference being the context that the function runs in. 
+
+When invoked as function the context is the window. When invoked as a method the context is the object, 
+
+
 #### [Apply Call] (chapter3/applyCall.html) ####
 
 It is possible in java script to invoke a function and give it any object we want as its context. 
