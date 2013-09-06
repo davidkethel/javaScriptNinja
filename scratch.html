@@ -37,31 +37,31 @@
             //assert(myFun2.peter == "peter", "peter is defined in its object");
             //assert(!typeof luke !== 'undefined', "Luke 'va' is not");
 
-    	    var outer1 = {
-    	        x: 3
-    	    };
+    	    //var outer1 = {
+    	    //    x: 3
+    	    //};
 	            
-	        var outer2 = {
-	            x: 4
-	        };
+	        //var outer2 = {
+	        //    x: 4
+	        //};
 
-            var outerFunc = function() {
+            //var outerFunc = function() {
 
-    	        var inner1 = outer1;
-    	        var inner2 = outer2;
+    	    //    var inner1 = outer1;
+    	    //    var inner2 = outer2;
 
-    	        return function innerFunc () {
-    	            return inner1.x * inner2.x;
-    	        };
-    	    };
+    	    //    return function innerFunc () {
+    	    //        return inner1.x * inner2.x;
+    	    //    };
+    	    //};
             
-    	    var outerResult = outerFunc();
-    	    alert(outerResult());
+    	    //var outerResult = outerFunc();
+    	    //alert(outerResult());
     	    
-    	    outer1.x = 4;
-    	    outer2.x = 5;
+    	    //outer1.x = 4;
+    	    //outer2.x = 5;
 
-    	    alert(outerResult());
+    	    //alert(outerResult());
 
 	        //var var1 = 9;
 	        //var var2 = var1;
@@ -98,6 +98,17 @@
 
 	        //assert(var3 === 16, "I can see out side of me");
 
+
+
+            function func1() {
+                return func1.x + 4;
+            }
+
+
+            func1.x = 123;
+
+
+            assert(func1() == 127, "A function can access its properties");
 
 
 
