@@ -1,6 +1,6 @@
 Just a repo for me to try out some of the examples from the book "secrets of the Java Script Ninja", and record what I learnt
 
-####[Function Declarations] (chapter2/functionDeclaration.html)####
+####[Function Declarations] (chapter3/functionDeclaration.html)####
 
 This page demonstrates the different ways to declare functions. 
 
