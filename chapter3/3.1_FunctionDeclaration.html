@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>function Declarations</title>
+		<title>3.1 Function Declarations</title>
 		<script src="../assert.js" type="text/javascript"></script>
 		<link href="../main.css" type="text/css" rel="stylesheet" />
 
@@ -17,16 +17,16 @@
 
 			//declare an anonymous function, that is available as a property of the window
 			var secondFunction = function() {
-				return true;
-			}
+			    return true;
+			};
 			assert( typeof window.secondFunction == "function", "secondfunction() is a property of the window");
 			assert(secondFunction.name === "", "second Function has no name");
 
 			// Declare an anonymous function, that is available as a property of the window.
 			// identical to secondfunction, except the property is explicit set to the window.
 			window.thirdFunction = function() {
-				return true;
-			}
+			    return true;
+			};
 			assert( typeof window.thirdFunction === "function", "thirdfunction is a property of the widow");
 			assert(thirdFunction.name === "", "third function has no name");
 
