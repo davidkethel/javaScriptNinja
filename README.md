@@ -32,7 +32,7 @@ When invoked as function the context is the window. When invoked as a method the
 
 Demonstrates the usage of of a function as an object constructor. Also shows that the This refers to individual objects context.
 
-When a functions is used as a constructur. 
+When a functions is used as a constructor. 
 * A new object is created. 
 * This object is passed to the constructor as "this".
 * In The absence of any explicit return value, the new object is returned.
