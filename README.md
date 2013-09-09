@@ -79,7 +79,7 @@ This example demonstrates a problem with the above example. The samurai object h
 
 So trying to run the samruai.say method after the Viking object has been reset causes an error as there is not viking.say to call in the recursive function.
 
-#### [Solving function recursion problem] (chapter4/simpleRecursion_WithFunctionName_ObjectReset.html) ####
+#### [4.5 Recursion Using An Objects Property Problem Fixed] (chapter4/4.5_RecursionUsingAnObjectsPropertyProblemFixed.html) ####
 
 To solve the above problem we can give the function a name, and call the functions name rather then the property refernce inside the function. 
 
