@@ -65,15 +65,7 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 * On a property of an object
 * As the callback to the setTimeout function
 
-#### [Function with 2 Names] (chapter4/functionWithTwoNames.html) ####
-
-This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
-
-Except that the function name is only available within the function. 
-
-
-
-#### [Simple Recursion] (chapter4/simpleRecursion.html) ####
+#### [4.2 Recursion Using A Named Function] (chapter4/4.2_RecursionUsingANamedFunction.html) ####
 
 This example demonstrates recusion by using a named function. 
 
@@ -92,3 +84,12 @@ So trying to run the samruai.say method after the Viking object has been reset c
 To solve the above problem we can give the function a name, and call the functions name rather then the property refernce inside the function. 
 
 This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
+
+
+
+#### [Function with 2 Names] (chapter4/functionWithTwoNames.html) ####
+
+This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
+
+Except that the function name is only available within the function. 
+
