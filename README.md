@@ -57,7 +57,7 @@ as the context of the call.
 
 This also demonstrates a more "functional" way thinking witin java script. 
 
-#### [Anonymous Function] (chapter4/simpleAnonynousFunctions.html) ####
+#### [4.1 Common Examples Of Anonymous Functions] (chapter4/4.1_CommonExamplesOfAnonymousFunctions.html) ####
 
 Demonstrates a couple of usages of the anonymous functions (Function defined without a name) including
 
@@ -65,30 +65,31 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 * On a property of an object
 * As the callback to the setTimeout function
 
+#### [4.2 Recursion Using A Named Function] (chapter4/4.2_RecursionUsingANamedFunction.html) ####
+
+This example demonstrates recusion by using a named function. 
+
+#### [4.3 Recursion Using An Objects Property] (chapter4/4.3_RecursionUsingAnObjectsProperty.html.html) ####
+
+This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
+
+#### [4.4 Recursion Using An Objects Property Problem] (chapter4/4.4_RecursionUsingAnObjectsPropertyProblem.html) ####
+
+This example demonstrates a problem with the above example. The samurai object has reference to the say method on the Viking object. This is a problem because the say method calls itself by referencing the Viking object. 
+
+So trying to run the samruai.say method after the Viking object has been reset causes an error as there is not viking.say to call in the recursive function.
+
+#### [4.5 Recursion Using An Objects Property Problem Fixed] (chapter4/4.5_RecursionUsingAnObjectsPropertyProblemFixed.html) ####
+
+To solve the above problem we can give the function a name, and call the functions name rather then the property refernce inside the function. 
+
+This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
+
+
+
 #### [Function with 2 Names] (chapter4/functionWithTwoNames.html) ####
 
 This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
 
 Except that the function name is only available within the function. 
 
-
-
-#### [Simple Recursion] (chapter4/simpleRecursion.html) ####
-
-This example demonstrates recusion by using a named function. 
-
-#### [Recusion using an Object property] (chapter4/simpleRecursion_WithObjectProperty.html) ####
-
-This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
-
-#### [Problem with above recursion] (chapter4/simpleRecursion_WithObjectProperty_ObjectReset.html) ####
-
-This example demonstrates a problem with the above example. The samurai object has reference to the say method on the Viking object. This is a problem because the say method calls itself by referencing the Viking object. 
-
-So trying to run the samruai.say method after the Viking object has been reset causes an error as there is not viking.say to call in the recursive function.
-
-#### [Solving function recursion problem] (chapter4/simpleRecursion_WithFunctionName_ObjectReset.html) ####
-
-To solve the above problem we can give the function a name, and call the functions name rather then the property refernce inside the function. 
-
-This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
