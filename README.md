@@ -86,8 +86,7 @@ To solve the above problem we can give the function a name, and call the functio
 This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
 
 
-
-#### [Function with 2 Names] (chapter4/functionWithTwoNames.html) ####
+#### [3.6 Function With Two Names] (chapter4/3.6_FunctionWithTwoNames.html) ####
 
 This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
 
