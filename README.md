@@ -48,7 +48,7 @@ There are 2 ways to do this
 * Call - Multiple parameters. The first parameter is the object to be used as the context, then all the variables to be used as arguments to the function.
 
 
-#### [Call Backs] (chapter3/callbacks.html) ####
+#### [3.6 Building a foreach function to demonstrate setting a function context] (chapter3/callbacks.html) ####
 
 This page demonstrates a nifty use of the call function. 
 
