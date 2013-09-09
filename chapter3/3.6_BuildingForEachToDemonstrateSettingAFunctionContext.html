@@ -1,7 +1,7 @@
 <html>
 	<head>
 
-		<title> Call Backs</title>
+		<title>3.6 Building a foreach function to demonstrate setting a function context</title>
 		<script type="text/javascript" src="../assert.js"></script>
 		<link href="../main.css" type="text/css" rel="stylesheet">
 
@@ -19,8 +19,8 @@
 			var weapons = ["shuriken", "katana", "numchucks"];
 
 			forEach(weapons, function(index) {
-				assert(this == weapons[index], "got the expected value of " + weapons[index]);
-			})
+			    assert(this == weapons[index], "Got the expected value of " + weapons[index]);
+			});
 
 		</script>
 	</body>
