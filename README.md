@@ -28,7 +28,7 @@ This page shows the difference between a function and method invocation of a fun
 When invoked as function the context is the window. When invoked as a method the context is the object, 
 
 
-#### [3.4 Using a Constructor to set common Objects] (chapter3/objectThis.html) ####
+#### [3.4 Using a Constructor to set common Objects] (chapter3/3.4_UsingAConstructorToSetUpCommonObjects.html) ####
 
 Demonstrates the usage of of a function as an object constructor. Also shows that the This refers to individual objects context.
 
@@ -38,7 +38,7 @@ When a functions is used as a constructur.
 3. In The absence of any explicit return value, the new object is returned.
 
 
-#### [3.5 Using the apply() and call() methods to supply the function context] (chapter3/applyCall.html) ####
+#### [3.5 Using the apply() and call() methods to supply the function context] (chapter3/3.5_UsingApplyCallMethodsToSupplyTheFunctionContext.html) ####
 
 It is possible in java script to invoke a function and give it any object we want as its context. 
 
@@ -48,7 +48,7 @@ There are 2 ways to do this
 * Call - Multiple parameters. The first parameter is the object to be used as the context, then all the variables to be used as arguments to the function.
 
 
-#### [3.6 Building a foreach function to demonstrate setting a function context] (chapter3/callbacks.html) ####
+#### [3.6 Building a foreach function to demonstrate setting a function context] (chapter3/3.6_BuildingForEachToDemonstrateSettingAFunctionContext.html) ####
 
 This page demonstrates a nifty use of the call function. 
 
