@@ -73,7 +73,7 @@ This example demonstrates recusion by using a named function.
 
 This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
 
-#### [Problem with above recursion] (chapter4/simpleRecursion_WithObjectProperty_ObjectReset.html) ####
+#### [4.4 Recursion Using An Objects Property Problem] (chapter4/4.4_RecursionUsingAnObjectsPropertyProblem.html) ####
 
 This example demonstrates a problem with the above example. The samurai object has reference to the say method on the Viking object. This is a problem because the say method calls itself by referencing the Viking object. 
 
