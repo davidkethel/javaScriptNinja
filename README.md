@@ -38,7 +38,7 @@ When a functions is used as a constructur.
 3. In The absence of any explicit return value, the new object is returned.
 
 
-#### [Apply Call] (chapter3/applyCall.html) ####
+#### [3.5 Using the apply() and call() methods to supply the function context] (chapter3/applyCall.html) ####
 
 It is possible in java script to invoke a function and give it any object we want as its context. 
 
