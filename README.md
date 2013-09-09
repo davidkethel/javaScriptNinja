@@ -57,7 +57,7 @@ as the context of the call.
 
 This also demonstrates a more "functional" way thinking witin java script. 
 
-#### [Anonymous Function] (chapter4/simpleAnonynousFunctions.html) ####
+#### [4.1 Common Examples Of Anonymous Functions] (chapter4/4.1_CommonExamplesOfAnonymousFunctions.html) ####
 
 Demonstrates a couple of usages of the anonymous functions (Function defined without a name) including
 
