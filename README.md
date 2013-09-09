@@ -28,7 +28,17 @@ This page shows the difference between a function and method invocation of a fun
 When invoked as function the context is the window. When invoked as a method the context is the object, 
 
 
-#### [Apply Call] (chapter3/applyCall.html) ####
+#### [3.4 Using a Constructor to set common Objects] (chapter3/3.4_UsingAConstructorToSetUpCommonObjects.html) ####
+
+Demonstrates the usage of of a function as an object constructor. Also shows that the This refers to individual objects context.
+
+When a functions is used as a constructor. 
+* A new object is created. 
+* This object is passed to the constructor as "this".
+* In The absence of any explicit return value, the new object is returned.
+
+
+#### [3.5 Using the apply() and call() methods to supply the function context] (chapter3/3.5_UsingApplyCallMethodsToSupplyTheFunctionContext.html) ####
 
 It is possible in java script to invoke a function and give it any object we want as its context. 
 
@@ -38,7 +48,7 @@ There are 2 ways to do this
 * Call - Multiple parameters. The first parameter is the object to be used as the context, then all the variables to be used as arguments to the function.
 
 
-#### [Call Backs] (chapter3/callbacks.html) ####
+#### [3.6 Building a foreach function to demonstrate setting a function context] (chapter3/3.6_BuildingForEachToDemonstrateSettingAFunctionContext.html) ####
 
 This page demonstrates a nifty use of the call function. 
 
@@ -47,7 +57,7 @@ as the context of the call.
 
 This also demonstrates a more "functional" way thinking witin java script. 
 
-#### [Anonymous Function] (chapter4/simpleAnonynousFunctions.html) ####
+#### [4.1 Common Examples Of Anonymous Functions] (chapter4/4.1_CommonExamplesOfAnonymousFunctions.html) ####
 
 Demonstrates a couple of usages of the anonymous functions (Function defined without a name) including
 
@@ -55,33 +65,42 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 * On a property of an object
 * As the callback to the setTimeout function
 
-#### [Function with 2 Names] (chapter4/functionWithTwoNames.html) ####
-
-This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
-
-Except that the function name is only available within the function. 
-
-
-#### [Object/This] (chapter3/objectThis.html) ####
-
-Demonstrates the usage of of a function as an object constructor. Also shows that the This refers to individual objects context.
-
-#### [Simple Recursion] (chapter4/simpleRecursion.html) ####
+#### [4.2 Recursion Using A Named Function] (chapter4/4.2_RecursionUsingANamedFunction.html) ####
 
 This example demonstrates recusion by using a named function. 
 
-#### [Recusion using an Object property] (chapter4/simpleRecursion_WithObjectProperty.html) ####
+#### [4.3 Recursion Using An Objects Property] (chapter4/4.3_RecursionUsingAnObjectsProperty.html) ####
 
 This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
 
-#### [Problem with above recursion] (chapter4/simpleRecursion_WithObjectProperty_ObjectReset.html) ####
+#### [4.4 Recursion Using An Objects Property Problem] (chapter4/4.4_RecursionUsingAnObjectsPropertyProblem.html) ####
 
 This example demonstrates a problem with the above example. The samurai object has reference to the say method on the Viking object. This is a problem because the say method calls itself by referencing the Viking object. 
 
 So trying to run the samruai.say method after the Viking object has been reset causes an error as there is not viking.say to call in the recursive function.
 
-#### [Solving function recursion problem] (chapter4/simpleRecursion_WithFunctionName_ObjectReset.html) ####
+#### [4.5 Recursion Using An Objects Property Problem Fixed] (chapter4/4.5_RecursionUsingAnObjectsPropertyProblemFixed.html) ####
 
 To solve the above problem we can give the function a name, and call the functions name rather then the property refernce inside the function. 
 
 This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
+
+
+#### [4.6 Function With Two Names] (chapter4/4.6_FunctionWithTwoNames.html) ####
+
+This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
+
+Except that the function name is only available within the function. 
+
+#### [4.7 Recursion Using Arguments Callee] (chapter4/4.7_RecursionUsingArgumentsCallee.html) ####
+
+This example follows on from the other recursion examples, but it different in that its uses the arguments.callee property when the function calls its self. 
+
+This is a far more reliable way of accessing the currently executing function.
+
+#### [4.8 Storing a Collection of Unique Functions] (chapter4/4.8_StoringCollectionOfUniqueFunctions.html) ####
+
+This example solves the problem of storing a unique collection of functions. When a function is added to the collection, the function gets an Id property. This way if there is an attempt to add the same function again, we can just look for the Id property to see if it’s been added.
+
+
+
