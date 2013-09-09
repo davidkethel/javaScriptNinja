@@ -69,7 +69,7 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 
 This example demonstrates recusion by using a named function. 
 
-#### [4.3 Recursion Using An Objects Property] (chapter4/4.3_RecursionUsingAnObjectsProperty.html.html) ####
+#### [4.3 Recursion Using An Objects Property] (chapter4/4.3_RecursionUsingAnObjectsProperty.html) ####
 
 This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
 
@@ -86,10 +86,21 @@ To solve the above problem we can give the function a name, and call the functio
 This way it doesn't matter if the ninja object has been reset as the say function call it self by it own name. 
 
 
-
-#### [Function with 2 Names] (chapter4/functionWithTwoNames.html) ####
+#### [4.6 Function With Two Names] (chapter4/4.6_FunctionWithTwoNames.html) ####
 
 This pretty cool example of a function that has its own name but is also referenced by a variable, so in a sense it has 2 names. 
 
 Except that the function name is only available within the function. 
+
+#### [4.7 Recursion Using Arguments Callee] (chapter4/4.7_RecursionUsingArgumentsCallee.html) ####
+
+This example follows on from the other recursion examples, but it different in that its uses the arguments.callee property when the function calls its self. 
+
+This is a far more reliable way of accessing the currently executing function.
+
+#### [4.8 Storing a Collection of Unique Functions] (chapter4/4.8_StoringCollectionOfUniqueFunctions.html) ####
+
+This example solves the problem of storing a unique collection of functions. When a function is added to the collection, the function gets an Id property. This way if there is an attempt to add the same function again, we can just look for the Id property to see if it’s been added.
+
+
 
