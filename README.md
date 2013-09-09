@@ -69,7 +69,7 @@ Demonstrates a couple of usages of the anonymous functions (Function defined wit
 
 This example demonstrates recusion by using a named function. 
 
-#### [Recusion using an Object property] (chapter4/simpleRecursion_WithObjectProperty.html) ####
+#### [4.3 Recursion Using An Objects Property] (chapter4/4.3_RecursionUsingAnObjectsProperty.html.html) ####
 
 This example is similar to the above example, except that the recursive function is now an anonymous function assigned to an object property. 
 
