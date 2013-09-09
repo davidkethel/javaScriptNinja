@@ -98,7 +98,9 @@ This example follows on from the other recursion examples, but it different in t
 
 This is a far more reliable way of accessing the currently executing function.
 
+#### [4.8 Storing a Collection of Unique Functions] (chapter4/4.8_StoringCollectionOfUniqueFunctions.html) ####
 
+This example solves the problem of storing a unique collection of functions. When a function is added to the collection, the function gets an Id property. This way if there is an attempt to add the same function again, we can just look for the Id property to see if it’s been added.
 
 
 
