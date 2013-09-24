@@ -106,4 +106,6 @@ This example solves the problem of storing a unique collection of functions. Whe
 
 This example demonstrates another use of the function properties. Function properties can be used to store the value from previous executions of the function. That way minimizing any expensive computation.
 
+#### [4.10 Simulating array like methods] (chapter4/4.10_SimulatingArrayLikeMethods.html) ####
 
+This is a particularly interesting example in that demonstrates that you can call the array add function on an object that is not an array. It actually adds the element and increments the length property on the object. 
