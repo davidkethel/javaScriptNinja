@@ -102,7 +102,7 @@ This is a far more reliable way of accessing the currently executing function.
 
 This example solves the problem of storing a unique collection of functions. When a function is added to the collection, the function gets an Id property. This way if there is an attempt to add the same function again, we can just look for the Id property to see if it’s been added.
 
-#### [4.8 Storing a Collection of Unique Functions] (chapter4/4.9_MemoizingPreviouslyComputedValues.html) ####
+#### [4.9 Storing a Collection of Unique Functions] (chapter4/4.9_MemoizingPreviouslyComputedValues.html) ####
 
 This example demonstrates another use of the function properties. Function properties can be used to store the value from previous executions of the function. That way minimizing any expensive computation.
 
