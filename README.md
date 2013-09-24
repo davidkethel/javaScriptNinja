@@ -102,8 +102,20 @@ This is a far more reliable way of accessing the currently executing function.
 
 This example solves the problem of storing a unique collection of functions. When a function is added to the collection, the function gets an Id property. This way if there is an attempt to add the same function again, we can just look for the Id property to see if it’s been added.
 
-#### [4.8 Storing a Collection of Unique Functions] (chapter4/4.9_MemoizingPreviouslyComputedValues.html) ####
+#### [4.9 Memoizing Previously Computed Values] (chapter4/4.9_MemoizingPreviouslyComputedValues.html) ####
 
 This example demonstrates another use of the function properties. Function properties can be used to store the value from previous executions of the function. That way minimizing any expensive computation.
+
+#### [4.10 Simulating array like methods] (chapter4/4.10_SimulatingArrayLikeMethods.html) ####
+
+This is a particularly interesting example in that demonstrates that you can call the array add function on an object that is not an array. It actually adds the element and increments the length property on the object. 
+
+#### [4.11 Min and Max functions that work on arrays] (chapter4/4.11_MinMaxForArrarys.html) ####
+
+This shows a cool way of calling the min and max function on an array. The Math.min and Math.max don't take arrays, put rather a varialbe lenght arrgument list. However you can use the Apply method to call them with an array. 
+
+#### [4.12 Method Overloading With Variable Length Argument Lists] (chapter4/4.12_MethodOverloadingWithVariableLengthArgumentLists.html) ####
+
+We can use the arguments parameter to simulating function overloading. 
 
 
