@@ -109,3 +109,7 @@ This example demonstrates another use of the function properties. Function prope
 #### [4.10 Simulating array like methods] (chapter4/4.10_SimulatingArrayLikeMethods.html) ####
 
 This is a particularly interesting example in that demonstrates that you can call the array add function on an object that is not an array. It actually adds the element and increments the length property on the object. 
+
+#### [4.11 Min and Max functions that work on arrays] (chapter4/4.11_MinMaxForArrarys) ####
+
+This shows a cool way of calling the min and max function on an array. The Math.min and Math.max don't take arrays, put rather a varialbe lenght arrgument list. However you can use the Apply method to call them with an array. 
