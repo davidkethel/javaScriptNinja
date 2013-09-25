@@ -118,4 +118,14 @@ This shows a cool way of calling the min and max function on an array. The Math.
 
 We can use the arguments parameter to simulating function overloading. 
 
+#### [4.13 slicing the Argument list] (chapter4/4.13_SlicingTheArgumentList.html) ####
 
+Another example of using the arguments parameter, however in this case, because the arguments parameter is an Array-Like and not an actual array we need to use “call” to make the slice method work on it.
+
+#### [4.15 Add Method] (chapter4/4.15_AddMethod.js) ####
+
+This is a little Java script function that adds a function to an object. It also allows for the adding of overloaded functions to object. It does this by first storing the previous function of the same name; it then invokes the new function if the number of parameters matches the number of arguments. If they don’t match then call the old function that has been stored. 
+
+#### [4.16 Adding Variable Lenght Functions To An Object] (chapter4/4.16_AddingVariableLenghtFunctionsToAnObject.html) ####
+
+Demonstrates the useage of the addMethod.
