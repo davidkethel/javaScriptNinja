@@ -129,3 +129,7 @@ This is a little Java script function that adds a function to an object. It also
 #### [4.16 Adding Variable Lenght Functions To An Object] (chapter4/4.16_AddingVariableLenghtFunctionsToAnObject.html) ####
 
 Demonstrates the useage of the addMethod.
+
+#### [5.1 A simple closure] (chapter5/5.1_SimpleClosure.html) ####
+
+This is just a simple example of a closure where code with the outerFunction can access outerValue.
