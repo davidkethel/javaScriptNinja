@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>4.16 Adding Variable Lenght Functions To An Object</title>
+    <script type="text/javascript" src="../assert.js"></script>
+    <script src="4.15_AddMethod.js"></script>
+    <link rel="stylesheet" href="../main.css" type="text/css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        var ninjas = {
+            values: ["David Kethel", "Peter Wone", "Bruce Saunders"]
+        };
+
+        addMethod(ninjas, "find", function () {
+            return this.values;
+        });
+
+        addMethod(ninjas, "find", function (name) {
+            var ret = [];
+
+            for (var i = 0; i < this.values.length; i++) {
+                if (this.values[i].indexOf(name) == 0)
+                    ret.push(this.values[i]);
+            }
+            return ret;
+        });
+
+        addMethod(ninjas, "find", function (first, last) {
+            var ret = [];
+
+            for (var i = 0; i < this.values.length; i++) {
+                if (this.values[i] == (first + " " + last))
+                    ret.push(this.values[i]);
+            }
+
+            return ret;
+        });
+        
+        assert(ninjas.find().length == 3, "found all ninjas");
+
+        assert(ninjas.find("Peter").length = 1, "Found ninja by first name");
+
+        assert(ninjas.find("Peter", "Wone").length = 1, "Found ninja by first and last name name");
+
+        assert(ninjas.find("Peter", " Wone", "Jr") == null, "Found nothing");
+        
+        assert(ninjas.find("David").length == 1, "found ninja by first nane");
+
+    </script>
+</body>
+</html>
