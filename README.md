@@ -133,3 +133,8 @@ Demonstrates the useage of the addMethod.
 #### [5.1 A simple closure] (chapter5/5.1_SimpleClosure.html) ####
 
 This is just a simple example of a closure where code with the outerFunction can access outerValue.
+
+
+#### [5.2 Not So Simple Closure] (chapter5/5.2_NotSoSimpleClosure) ####
+
+In this example we can see that the closure created by the declaration of innerFunction creates a closure that includes both innerValue and outerValue. innerFunction is able to access these variables even after their original scope has gone away, because they were in scope at the time the function was declared. 
