@@ -134,11 +134,14 @@ Demonstrates the useage of the addMethod.
 
 This is just a simple example of a closure where code with the outerFunction can access outerValue.
 
-
-#### [5.2 Not So Simple Closure] (chapter5/5.2_NotSoSimpleClosure) ####
+#### [5.2 Not So Simple Closure] (chapter5/5.2_NotSoSimpleClosure.html) ####
 
 In this example we can see that the closure created by the declaration of innerFunction creates a closure that includes both innerValue and outerValue. innerFunction is able to access these variables even after their original scope has gone away, because they were in scope at the time the function was declared. 
 
-#### [5.3 What eles closures can see] (chapter5/5.3_WhatElseClosuresCanSee) ####
+#### [5.3 What eles closures can see] (chapter5/5.3_WhatElseClosuresCanSee.html) ####
 
 A closure has access to the Function parameters, all variables in an outer scope even those declared after the function declaration.
+
+#### [5.4 Private Variables With Closures] (chapter5/5.4_PrivateVariablesWithClosures.html) ####
+
+This example demonstrates using closures to imitate private variables. The variable itself is declared within a function as is not accessible outside of it. However the access functions create closures that include the private variable.
