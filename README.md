@@ -145,3 +145,8 @@ A closure has access to the Function parameters, all variables in an outer scope
 #### [5.4 Private Variables With Closures] (chapter5/5.4_PrivateVariablesWithClosures.html) ####
 
 This example demonstrates using closures to imitate private variables. The variable itself is declared within a function as is not accessible outside of it. However the access functions create closures that include the private variable.
+
+#### [5.5 Closures in Ajax call Back] (chapter5/5.5_ClosuresInAjaxCallBack.html) ####
+
+This example uses closures to enable access to the testSubject element in both the click and ajax success call back functions. 
+
