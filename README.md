@@ -150,3 +150,6 @@ This example demonstrates using closures to imitate private variables. The varia
 
 This example uses closures to enable access to the testSubject element in both the click and ajax success call back functions. 
 
+#### [5.6 Closure in Animation] (chapter5/5.6_ClosureInAnimation.html) ####
+
+Code within the setInterval callback can access the Tick, elem and the timer it self because of the closure. 
