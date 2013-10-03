@@ -174,3 +174,9 @@ This is a simple example of simple partial function. It returns an anonymous fun
 
 This is a more complex version of the partial function above. It allows for multiple parameters to be prefilled. It does this by looping through all the arguments and placing them in the undefined holes of the parameter list.
 
+#### [5.14 Self memoizing function using closures] (chapter5/5.14_SelfMemoizingFunctionUsingClosures.html) ####
+
+This is another way of doing self memoizing function like from chapter4, this example uses closures. The memoize function return an anonymouse function that includes the function that is too memoized in its closure. When executes the anonymous function runs the memoized function with the original function as the context.
+
+
+
