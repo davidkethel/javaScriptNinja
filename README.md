@@ -161,3 +161,7 @@ We can see in this example that the context for the click callback is not the ob
 #### [5.8 Binding A Specific Context to A Function FIXED] (chapter5/5.8_BindingSpecificContextToAFunction_Fixed.html) ####
 
 In order to fix the above problem by introducing a bind method. The anonymous function within the bind function creates a closure that includes the parameters of the bind function. This enables the button object to be the context of the click handler.
+
+#### [5.10 Partially Applying arguments to a Native Function] (chapter5/5.10_PartiallyApplyingArgumentsToANativeFunction.html) ####
+
+This is an example of partially applying a function. The native string split function has the regular expression that it uses prefilled. This then creates a new function that can be used to split a csv string.
