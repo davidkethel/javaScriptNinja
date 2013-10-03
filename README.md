@@ -169,3 +169,8 @@ This is an example of partially applying a function. The native string split fun
 #### [5.11 Curry Function] (chapter5/5.11_CurryFunction.html) ####
 
 This is a simple example of simple partial function. It returns an anonymous function that includes the name of the function and any arguments in its closure. When called it calls the function applying the first argument to it.
+
+#### [5.12 A more complex partial function] (chapter5/5.12_AMoreComplexPartialFunction.html) ####
+
+This is a more complex version of the partial function above. It allows for multiple parameters to be prefilled. It does this by looping through all the arguments and placing them in the undefined holes of the parameter list.
+
