@@ -165,3 +165,7 @@ In order to fix the above problem by introducing a bind method. The anonymous fu
 #### [5.10 Partially Applying arguments to a Native Function] (chapter5/5.10_PartiallyApplyingArgumentsToANativeFunction.html) ####
 
 This is an example of partially applying a function. The native string split function has the regular expression that it uses prefilled. This then creates a new function that can be used to split a csv string.
+
+#### [5.11 Curry Function] (chapter5/5.11_CurryFunction.html) ####
+
+This is a simple example of simple partial function. It returns an anonymous function that includes the name of the function and any arguments in its closure. When called it calls the function applying the first argument to it.
