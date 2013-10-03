@@ -154,10 +154,10 @@ This example uses closures to enable access to the testSubject element in both t
 
 Code within the setInterval callback can access the Tick, elem and the timer itself because of the closure. It also shows that because those variables are within the animateIt function, each time the function is called each closure gets a separate set of variables. Therefore you can animate multiple elements without their variable conflicting. 
 
-#### [5.7 Binding A Secific Context to A Function] (chapter5/5.7_BindingSpecificContextToAFunction.html) ####
+#### [5.7 Binding A Specific Context to A Function] (chapter5/5.7_BindingSpecificContextToAFunction.html) ####
 
 We can see in this example that the context for the click callback is not the object we expected but rather the element the the click was on. 
 
-#### [5.8 Binding A Secific Context to A Function] (chapter5/5.8_BindingSpecificContextToAFunction_Fixed.html) ####
+#### [5.8 Binding A Specific Context to A Function FIXED] (chapter5/5.8_BindingSpecificContextToAFunction_Fixed.html) ####
 
 In order to fix the above problem by introducing a bind method. The anonymous function within the bind function creates a closure that includes the parameters of the bind function. This enables the button object to be the context of the click handler.
