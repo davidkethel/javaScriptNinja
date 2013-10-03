@@ -133,3 +133,31 @@ Demonstrates the useage of the addMethod.
 #### [5.1 A simple closure] (chapter5/5.1_SimpleClosure.html) ####
 
 This is just a simple example of a closure where code with the outerFunction can access outerValue.
+
+#### [5.2 Not So Simple Closure] (chapter5/5.2_NotSoSimpleClosure.html) ####
+
+In this example we can see that the closure created by the declaration of innerFunction creates a closure that includes both innerValue and outerValue. innerFunction is able to access these variables even after their original scope has gone away, because they were in scope at the time the function was declared. 
+
+#### [5.3 What eles closures can see] (chapter5/5.3_WhatElseClosuresCanSee.html) ####
+
+A closure has access to the Function parameters, all variables in an outer scope even those declared after the function declaration.
+
+#### [5.4 Private Variables With Closures] (chapter5/5.4_PrivateVariablesWithClosures.html) ####
+
+This example demonstrates using closures to imitate private variables. The variable itself is declared within a function as is not accessible outside of it. However the access functions create closures that include the private variable.
+
+#### [5.5 Closures in Ajax call Back] (chapter5/5.5_ClosuresInAjaxCallBack.html) ####
+
+This example uses closures to enable access to the testSubject element in both the click and ajax success call back functions. 
+
+#### [5.6 Closure in Animation] (chapter5/5.6_ClosureInAnimation.html) ####
+
+Code within the setInterval callback can access the Tick, elem and the timer itself because of the closure. It also shows that because those variables are within the animateIt function, each time the function is called each closure gets a separate set of variables. Therefore you can animate multiple elements without their variable conflicting. 
+
+#### [5.7 Binding A Specific Context to A Function] (chapter5/5.7_BindingSpecificContextToAFunction.html) ####
+
+We can see in this example that the context for the click callback is not the object we expected but rather the element the the click was on. 
+
+#### [5.8 Binding A Specific Context to A Function FIXED] (chapter5/5.8_BindingSpecificContextToAFunction_Fixed.html) ####
+
+In order to fix the above problem by introducing a bind method. The anonymous function within the bind function creates a closure that includes the parameters of the bind function. This enables the button object to be the context of the click handler.
