@@ -161,3 +161,22 @@ We can see in this example that the context for the click callback is not the ob
 #### [5.8 Binding A Specific Context to A Function FIXED] (chapter5/5.8_BindingSpecificContextToAFunction_Fixed.html) ####
 
 In order to fix the above problem by introducing a bind method. The anonymous function within the bind function creates a closure that includes the parameters of the bind function. This enables the button object to be the context of the click handler.
+
+#### [5.10 Partially Applying arguments to a Native Function] (chapter5/5.10_PartiallyApplyingArgumentsToANativeFunction.html) ####
+
+This is an example of partially applying a function. The native string split function has the regular expression that it uses prefilled. This then creates a new function that can be used to split a csv string.
+
+#### [5.11 Curry Function] (chapter5/5.11_CurryFunction.html) ####
+
+This is a simple example of simple partial function. It returns an anonymous function that includes the name of the function and any arguments in its closure. When called it calls the function applying the first argument to it.
+
+#### [5.12 A more complex partial function] (chapter5/5.12_AMoreComplexPartialFunction.html) ####
+
+This is a more complex version of the partial function above. It allows for multiple parameters to be prefilled. It does this by looping through all the arguments and placing them in the undefined holes of the parameter list.
+
+#### [5.14 Self memoizing function using closures] (chapter5/5.14_SelfMemoizingFunctionUsingClosures.html) ####
+
+This is another way of doing self memoizing function like from chapter4, this example uses closures. The memoize function return an anonymouse function that includes the function that is too memoized in its closure. When executes the anonymous function runs the memoized function with the original function as the context.
+
+
+
