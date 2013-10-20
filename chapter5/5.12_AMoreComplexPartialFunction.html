@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Partially Applying arguments to a Native Function</title>
+		<title> 5.12 A more complex partial function</title>
 	    <script type="text/javascript" src="../assert.js"></script>
 		<link href="../main.css" type="text/css" rel="stylesheet">
 		
@@ -27,8 +27,8 @@
     	    };
 
 
-    	    Math.maxAbove500 = Math.max.partial(undefined, undefined, undefined, undefined,undefined, 500);
-    	    assert(Math.maxAbove500(3, 4, 11223, 1, 6) == 11223, "Max of 500, 3, 4, 11223, 1, 6 is 11223");      //#4
+    	    Math.maxAbove500or600 = Math.max.partial(undefined, 600, undefined, undefined,undefined, 500);
+    	    assert(Math.maxAbove500or600(3, 4, 1, 6) == 600, "Max of 500, 600, 3, 4, , 1, 6 is 600");      //#4
 
             
     	    var delay = setTimeout.partial(undefined, 10);
