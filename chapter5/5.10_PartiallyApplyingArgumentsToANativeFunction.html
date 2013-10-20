@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> 5.10 Partially Applying arguments to a Native Function</title>
+	    <script type="text/javascript" src="../assert.js"></script>
+        <script type="text/javascript" src="partial.js"></script>
+		<link href="../main.css" type="text/css" rel="stylesheet">
+		
+	</head>
+	<body>
+		
+	    <script>    	    
+            
+    	    String.prototype.csvPartial = String.prototype.split.partial(/,\s*/);
+    	    
+    	    var resultsPartial = ("Dave, Sim, Peter").csvPartial();
+
+    	    assert(resultsPartial[0] == "Dave" && resultsPartial[1] == "Sim" && resultsPartial[2] == "Peter", "The test values were split properly using Partial");
+    	    
+
+    	</script>
+	</body>
+</html>
