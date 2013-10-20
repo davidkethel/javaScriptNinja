@@ -178,5 +178,9 @@ This is a more complex version of the partial function above. It allows for mult
 
 This is another way of doing self memoizing function like from chapter4, this example uses closures. The memoize function return an anonymouse function that includes the function that is too memoized in its closure. When executes the anonymous function runs the memoized function with the original function as the context.
 
+#### [5.15 Function Wrapping] (chapter5/5.15_FunctionWrapping.js) ####
+
+An small function wrapping function. It allows for the original function implementation to wrapped in a new implementation.
+
 
 
