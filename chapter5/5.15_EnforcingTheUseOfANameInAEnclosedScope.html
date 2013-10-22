@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Enforcing the use of a name within an enclosed scope</title>
+		<title> 5.16 Enforcing the use of a name within an enclosed scope</title>
 
 	    <script type="text/javascript" src="../assert.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -21,12 +21,26 @@
                  alert('not jQuery!');
             };
 
-            (function($) {
-                $('img').on('click', function(event) {
+
+
+
+            //(function($) {
+            //    $('img').on('click', function(event) {
+            //        $(event.target).addClass('clickedOn');
+            //    });
+            //})(jQuery);
+            
+
+            var myFunction = function ($) {
+                $('img').on('click', function (event) {
                     $(event.target).addClass('clickedOn');
                 });
-            })(jQuery);
-            
+            };
+
+            myFunction(jQuery);
+
+
+
             
             </script>
     </body>
