@@ -182,6 +182,14 @@ This is another way of doing self memoizing function like from chapter4, this ex
 
 An small function wrapping function. It allows for the original function implementation to wrapped in a new implementation.
 
-#### [5.16 Enforcing the use of a name within an enclosed scope] (chapter5/5.15_EnforcingTheUseOfANameInAEnclosedScope.js) ####
+#### [5.16 Enforcing the use of a name within an enclosed scope] (chapter5/5.16_EnforcingTheUseOfANameInAEnclosedScope.js) ####
 
 This demonstrates the use of an imediatly executed function to enforce the use of a name with a function. Out side of the function "$" is not a reference to jQuery, however when the imediate function is executed the jquery object is passed in and bound to the "$" parrameter.
+
+#### [5.17 Loops and Closures] (chapter5/5.17_LoopsAndClosures.html) ####
+
+This demonstrates one potential issue with using closures with a loop. Each loop of the for loop creates a closure that has a reference to i. However each closure has a reference to the same i. So after the completion of the for loop i = 2, therfore each click handler alerts 2. 
+
+#### [5.17 Loops and Closures Fixed] (chapter5/5.18_LoopsAndClosuresFixed.html) ####
+
+Fixes the above problem by imploying an imediatly executed function. This imedialtly executed function binds the current value of i to the input parrameter of function. That way each closure has there own n. 

@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Loop and Closure</title>
+		<title> 5.18 Loops and Closures Fixed</title>
 
 	    <script type="text/javascript" src="../assert.js"></script>
 		<link href="../main.css" type="text/css" rel="stylesheet">
@@ -11,6 +11,7 @@
 
 	</head>
     <body>
+        
 
         <div>DIV 0</div>
         <div>DIV 1</div>
@@ -18,12 +19,15 @@
         <script type="text/javascript">
 
             var divs = document.getElementsByTagName("div");
-            
-            for (var i = 0; i < divs.length; i++) {
-                divs[i].addEventListener("click", function() {
-                    alert("divs #" + i + " was clicked");
-                }, false);
-            }          
+
+            for (var i = 0; i < divs.length; i++)
+                (function(n) {
+                    divs[i].addEventListener("click", function() {
+                        alert("divs #" + n + " was clicked");
+                    }, false);
+                })(i);
+                        
         </script>
     </body>
+
 </html>
